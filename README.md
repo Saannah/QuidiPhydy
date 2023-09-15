@@ -37,4 +37,4 @@ intros = list( numberOfEvents = length(unlist(MRCAout)),
 
 ```all_transitions``` A list of all transmissions found, identified by their parent node of the transmission branches. This is useful for identifying/counting secondary spillovers. The difference between this list and MRCAout would give the list of secondary spillovers.
 
-If you plan to use this "package" and need more help, please feel free to comtact me at sana.naderi@mcgill.ca.
+If you plan to use this function and need more help, please feel free to contact me at sana.naderi@mcgill.ca.
