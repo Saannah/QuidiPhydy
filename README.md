@@ -2,9 +2,7 @@
 
 *Package development*
 
-The core algorithm that we used for inference of transmission counts on the phylogenetic tree was previously developed (Naderi et al.). During this project, we modified the code so that it is a more generally usable function in R. Additionally, we formatted the code into an R package called QuidiPhyDy (https://github.com/Saannah/QuidiPhydy) which has been tested locally and also on the automatic testing platform for CRAN. We plan to further extend the package to add more features and functions to it. So far, it only contains one function: Spillover().
-
-We also added the feature to distinguish between primary and secondary transmissions. First, all branches along with a state change has happened will be identified. Then, the mosst basal ones are marked as primary spillover events, such that nested events aren't reported as independent occurences.
+The core algorithm that we used for inference of transmission counts on the phylogenetic tree was previously developed (Naderi et al.). During this project, we modified the code so that it is a more generally usable function in R. Additionally, we formatted the code into an R package called QuidiPhyDy (https://github.com/Saannah/QuidiPhydy) We plan to further extend the package to add more features and functions to it. So far, it only contains one function: Spillover().
 
 This function takes the following as input:
 
