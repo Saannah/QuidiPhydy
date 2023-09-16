@@ -12,6 +12,10 @@
 #'
 #' @return transitions object
 #' @export
+#' @author Sana Naderi and Carmen Lia Murall
+#' @references
+#'   Murall et al. (2021) *A small number of early introductions seeded widespread transmission of SARS-CoV-2 in Quebec, Canada.* Genome Medicine. 13:169
+#'   Naderi et al. (2023) *Zooanthroponotic transmission of SARS-CoV-2 and host-specific viral mutations revealed by genome-wide phylogenetic analysis.* eLife. 12:e83685
 #'
 #' @examples 
 #' fromto = c("animal", "human")
