@@ -19,7 +19,7 @@ This function takes the following as input:
 ``` tree ```
 This is a tree object of type nexus. Preferably it should be a time tree so that the branch lengths correspond to time (this way the inference is of when an introduction or spillover event happened). The option for the function to accept other common tree types (e.g. Newick or divergence) is in the works.
 
-``` trait```
+```trait```
 This is an array that describes the traits or states of the tips of the tree. It should be an array whose length is the same as the number of the tips of the tree, and the order of the states should correspond to the order that tips of the tree appear in the tree object. This is pretty easy to arrange, since you can get the tip labels of most regular tree objects in R on its tree$tip.label attribute. Currently, the function only supports only two discrete states for the tips. Thus, here should be exactly two unique values in this vector. In future versions, incorporation of n discrete states and continuous traits will be added. 
 
 ```fromto = c("out", "in")```
@@ -32,13 +32,12 @@ Currently this argument has been set to default = "ML". This is the method with 
 The function outputs a list. This is what this list looks like:
 
 ```
-intros = list( numberOfEvents = length(unlist(MRCAout)),
-                 MRCAout = MRCAout, MRCAin = MRCAin, reconstruction = all,
-                 all_transitions = trans_nodes)
+intros = list( numberOfEvents, MRCAout, MRCAin,
+                reconstruction, all_transitions)
 ```
  ```numberOfEvents ```The number of primary events that were found in the desired directions determined by the user.
 
-``` MRCAout``` The node numbers corresponding to parent node of the primary transitions branches found.
+```MRCAout``` The node numbers corresponding to parent node of the primary transitions branches found.
 
  ```MRCAin``` The node numbers corresponding to child node of the primary transitions branches found.
 
