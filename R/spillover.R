@@ -1,17 +1,25 @@
 
-#' Title
+#' Transitions finder
 #'
+#' This function searches for the transitions between states of a trait along a given phylogenetic tree. 
+#' It implements ancestral state reconstruction and finds the most recent common ancestor (MRCA) both in and out of the clade of interest.
+#' This function can be used to count and locate the number of spillover events (e.g. from animal to human), introduction events (e.g. into a new country or outbreak institution), or for estimating when trait evolution occurred. 
+#' 
 #' @param tree Phylogenetic tree object of type Nexus
 #' @param trait An array describing traits in the tips of the tree. The order should correspond to the order of the tips of the tree. Current version only supports 2 traits
-#' @param fromto 2-element array specifying the direction in which spillovers should be searched for, should match the values in "trait"
+#' @param fromto 2-element array specifying the direction in which transitions should be searched for, should match the values in "trait"
 #' @param method Ancestral state reconstruction method, current version supports maximum likelihood which is the default
 #'
-#' @return spillover object
+#' @return transitions object
 #' @export
 #'
-#' @examples fromto = c("animal", "human")
+#' @examples 
+#' fromto = c("animal", "human")
+#' fromto = c("country1", "country2")
+#' fromto = c("general population", "institution outbreak")
+#' fromto = c("without mutation", "with mutation")
 #'
-spillover = function(tree,
+transitionsfinder = function(tree,
                        trait,
                        fromto,
                        #species,
@@ -82,7 +90,7 @@ spillover = function(tree,
 
 
   #### NOTE:
-  # the output of the mpr function corresponds to the edge attribute of thhe tree
+  # the output of the mpr function corresponds to the edge attribute of the tree
   # the output of the ace fucntion increments from the top of the tree (starting from the root)
 
 
@@ -230,7 +238,7 @@ spillover = function(tree,
   parents_list = parent_finder(tree, trans_nodes)
 
   #function for finding transition parents of transition nodes
-  # this function gets a list of vectors representing nodes ancestors, returns transision events among them
+  # this function gets a list of vectors representing nodes ancestors, returns transition events among them
 
 
   checked_list = vector()
