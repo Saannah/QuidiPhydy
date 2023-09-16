@@ -1,11 +1,9 @@
 Package: QuidiPhydy
-Title: What the Package Does (One Line, Title Case)
+Title: Phylodynamic Analysis
 Version: 0.0.0.9000
 Authors@R: 
-    c(person("Sana", "Naderi", , "sana.naderi@mcgill.ca", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID")),
-      person("Carmen Lia", "Murall", role = "aut"))
-Description: What the package does (one paragraph).
+    c(person("Sana", "Naderi", , "sana.naderi@mcgill.ca", role = c("aut", "cre")), person("Carmen Lia", "Murall", role = "aut"))
+Description: Phylodynamic analysis on phylogenetic trees to infer transmission rates among subgroups.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
