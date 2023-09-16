@@ -10,7 +10,7 @@
 #' @param fromto 2-element array specifying the direction in which transitions should be searched for, should match the values in "trait"
 #' @param method Ancestral state reconstruction method, current version supports maximum likelihood which is the default
 #'
-#' @return transitions object
+#' @return intros The transitions object
 #' @export
 #' @author Sana Naderi and Carmen Lia Murall
 #' @references
