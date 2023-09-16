@@ -184,7 +184,7 @@ spillover = function(tree,
     }
   }
   transitions_parents = transitions_childeren[z,]
-  #trans_nodes includes ALL events where e non-QC node has a QC child. this includes embedded transitions and singletons
+  #trans_nodes includes ALL events where an OUT node has an IN child. this includes embedded transitions and singletons
   trans_nodes = sort(unique(transitions_parents$child))
   trans_nodes_store = trans_nodes
 
@@ -267,7 +267,7 @@ spillover = function(tree,
 
 
 
-  # finding the non-qc parents of "new transitions"
+  # finding the OUT parents of "new transitions"
   new_independent_transitions_parents = vector()
   for (i in 1:length(new_independent_transitions)){
     ind = which(edge[,2] == new_independent_transitions[i])
