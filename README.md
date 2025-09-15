@@ -6,7 +6,7 @@
 
 
 The functions found in this package were previously developed for a phylogeography study (Murall et al. 2021) and a zoonotic spillover study (Naderi et al. 2023) of SARS-CoV-2. Due to the large size of the SARS-CoV-2 phylogenetic trees and due to the need to analyze many large trees at once, we developed these functions to run character optimization functions and tree crawling in a more automated fashion. We have modified the code developed for these projects so that they are more generally applicable and will make up a new R package called **QuidiPhyDy** (https://github.com/Saannah/QuidiPhydy).  
-The package has been tested locally and on the automatic testing platform for CRAN. We plan to further extend the package to add more features and functions.  
+The package has been tested locally and on the automatic testing platform for CRAN.
 
 So far, this package only contains one function: `transitionsfinder()`.  
 This transitions finding algorithm infers and counts the transmission events between a change of states of a trait along a phylogenetic tree, i.e. an introduction or spillover event is infered to have happened between the most recent common ancestor (MRCA) from the outgroup to the ingroup and the MRCA within the ingroup. This algorithm applies acncestral state reconstruction, ASR, (impmented in the *ape* package, Paradis et al.), using methods such maximum likelihood (ML) or maximum parsimony, and state transition models, such as equal rates, to infer state transitions. Once applied to the tree, the algorithm crawls the tree to count all found transitions, and returns a summary table with all possible events (based on the liberal or conservative choices made by the user when choosing ASR methods). 
